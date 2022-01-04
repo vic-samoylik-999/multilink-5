@@ -1,0 +1,570 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Prata&display=swap');
+
+/* font-family: 'Prata', serif; */
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+
+    /*========== Colors ==========*/
+    --main: #EADFE3;
+    --main-shade: #937483;
+    --black: #141414;
+    --background: #F5F5F5;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Open Sans Condensed', sans-serif;
+
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 3rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== Button Dark/Light ==========*/
+
+
+/*==================== BASE ====================*/
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+html {scroll-behavior: smooth;}
+
+body {font-family: var(--body-font);}
+
+h1, h2, h3 {
+font-weight: 700;
+color: var(--black);
+line-height: 1.5;
+}
+
+h2 {font-size: var(--h2-font-size);}
+
+h3 {font-size: var(--h3-font-size);}
+
+ul {list-style: none;}
+
+a {text-decoration: none;}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+body {
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 700px) {
+    body {
+         font-size: 1.3rem;
+    }
+}
+
+.wrapper {
+    max-width: 650px;
+    margin: 30px auto;
+    box-shadow: 0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    border-radius: 9px;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 695px) {
+    .wrapper {
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .wrapper {
+        margin: 0 auto;
+    }
+}
+
+.section,
+.footer {
+    padding: 2.5rem 1rem;
+}
+
+.title {
+    font-family: 'Prata', serif;
+    font-size: 4rem;
+    letter-spacing: 3px;
+}
+
+@media screen and (max-width: 400px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+.title-white {
+    color: #fff;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12);
+    background-color: transparent;
+    color: var(--black);
+    padding: 24px 0;
+    text-align: center;
+    border: 2px solid var(--black);
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--main-shade-two);
+}
+
+.btn h3 {
+    font-size: 1rem;
+}
+
+.btn-narrow {
+    width: 85%;
+    align-self: center;
+}
+
+.btn-rotatay {
+    animation-name: rotatay;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotatay {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    5% {
+      transform: scale(1.1);
+    }
+    10% {
+      transform: scale(1.1) rotate(3deg);
+    }
+    15% {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    20% {
+      transform: scale(1.1) rotate(6deg);
+    }
+    25% {
+      transform: scale(1.1) rotate(-6deg);
+    }
+    30% {
+      transform: rotate(0deg);
+    }
+}
+
+.btn-pulse {
+    animation-name: pulse;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    12% {
+        transform: scale(1.05);
+    }
+    24% {
+        transform: scale(1);
+    }
+    36% {
+        transform: scale(1.05);
+    }
+    48% {
+        transform: scale(1);
+    }
+}
+
+.btn p {
+    font-size: .65rem;
+    font-style: italic;
+    font-weight: 300;
+    text-transform: none;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    row-gap: .75rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+
+.footer__link {
+    color: #606c38;
+    display: inline-block;
+    font-size: 0.85rem;
+}
+
+.footer__link:hover {
+    color: #1b2007;
+}
+
+/*==================== Scroll Bar ====================*/
+
+::-webkit-scrollbar {
+    width: 0.60rem;
+    background-color: var(--main);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-shade);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #794f63;
+}
+
+/*==================== MAIN STYLING ====================*/
+
+/*==================== Header ====================*/
+.header {
+}
+
+.header__title {
+    line-height: 1;
+    transform: translateX(50%);
+    position: relative;
+}
+
+.header__arrow-box {
+    overflow: hidden;    
+    position: absolute;
+    width: 175px;
+    top: 68%;
+    left: 55%;
+}
+
+@media screen and (max-width: 649px) {
+    .header__arrow-box {
+        width: 125px;
+        top: 75%;
+        left: 68%;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .header__arrow-box {
+        width: 200px;
+        top: 70%;
+        left: 55%;
+    }
+}
+
+
+@media screen and (min-width: 1050px) {
+    .header__arrow-box {
+        width: 200px;
+        top: 70%;
+        left: 55%;
+    }
+}
+
+.header__arrow {
+    transform: rotate(300deg);
+}
+
+.header__photo {
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    margin-top: -3rem;
+    position: relative;
+    z-index: -1;
+    margin-bottom: 2rem;
+}
+
+/*==================== Intro ====================*/
+.intro {
+    margin-top: -1rem;
+    margin-bottom: 14rem;
+}
+
+.intro__header {
+    margin-bottom: 1.5rem;
+    padding-left: 1.35rem;
+}
+
+.intro__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    counter-reset: myCounter;
+}
+
+.intro__list li:last-child {
+    margin-bottom: 1.2rem;
+}
+
+.intro__item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.intro__item .intro__item-header::before {
+    counter-increment: myCounter;
+    content:counter(myCounter);
+    color: var(--main-shade);
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.intro__item-header {
+
+}
+
+.intro__item-header span {
+    text-decoration: underline;
+}
+
+.intro__item-arrow {
+    max-width: 20%;
+    margin: 0 auto;
+}
+
+.intro__item-text {
+    background-color: var(--main);
+    padding: 1.2rem;
+    border-radius: 9px;
+    text-align: justify;
+}
+
+.intro__disclaimer {
+    font-size: 0.7rem;
+}
+
+/*==================== Guide ====================*/
+.guide {
+    background-color: var(--main);
+    margin: -1rem;
+}
+
+.guide__header-box {
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.guide__photo {
+    max-width: 75%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.guide__title {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.guide__main-box {
+    margin-top: -8rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.guide__text-decor {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    column-gap: .4rem;
+}
+
+.guide__text {
+    order: 2;
+    line-height: 0;
+}
+
+.guide__decor {
+    order: 1;
+    height: 50px;
+}
+
+@media screen and (max-width: 450px) {
+    .guide__text-decor {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .guide__decor {
+        width: 10%;
+        align-self: center;
+    }
+
+}
+
+.guide__description {
+}
+
+.guide__subtitle {
+    padding-left: .5rem;
+}
+
+.guide__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+}
+
+.guide__list-item {
+    position: relative;
+}
+
+.guide__list li.guide__list-item:nth-child(odd) {
+    padding-left: 3rem;
+}
+
+.guide__list li.guide__list-item:nth-child(even) {
+    padding-left: 6rem;
+}
+
+.guide__list li.guide__list-item:nth-child(odd)::before,
+.guide__list li.guide__list-item:nth-child(even)::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.guide__list li.guide__list-item:nth-child(odd)::before {
+    left: 15px;
+}
+
+.guide__list li.guide__list-item:nth-child(even)::before {
+    left: 65px;
+}
+
+/*==================== Consultation ====================*/
+
+.consultation {
+    padding-top: 5rem;
+}
+
+.consultation__photo-grid {
+    margin-bottom: 3rem;
+
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.consultation__pic-one {
+    z-index: 1;
+    position: absolute;
+    width: 80%;
+}
+
+.consultation__pic-two {
+    z-index: 2;
+    position: absolute;
+    width: 30%;
+    bottom: 0;
+    left: 10%;
+}
+
+.consultation__pic-three {
+    z-index: 2;
+    position: absolute;
+    width: 40%;
+    bottom: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 650px) {
+    .consultation__photo-grid {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .consultation__photo-grid {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .consultation__photo-grid {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .consultation__photo-grid {
+        height: 350px;
+    }
+}
+
+.consultation__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+.consultation__title {
+    text-align: center;
+}
+
+@media screen and (max-width: 470px) {
+    .consultation__title {
+        font-size: 3rem;
+    }
+}
+
+.consultation__disclaimer {
+    margin: 0 4rem;
+    padding-left: 1rem;
+    position: relative;
+    border-left: 2px solid var(--black);
+}
+
+.consultation__disclaimer-span {
+    font-weight: 700;
+}
+
+.consultation__disclaimer::before {
+}
